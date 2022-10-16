@@ -15,6 +15,7 @@ export class AppComponent {
     this.config = {
       navigation: true,
       anchors: ['about', 'roadmap', 'tech-stack'],
+      licenseKey: ''
     };
   }
 
