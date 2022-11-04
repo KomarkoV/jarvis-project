@@ -3,15 +3,15 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularFullpageModule } from '@fullpage/angular-fullpage';
 
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, 
   NbButtonModule, NbContextMenuModule, NbMenuModule, 
-  NbActionsModule, NbCardModule } from '@nebular/theme';
+  NbActionsModule, NbCardModule, NbTabsetModule, NbListModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AboutComponent } from './home/about.component';
 import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+import { NgxGraphModule } from '@swimlane/ngx-graph';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +32,9 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     NbContextMenuModule,
     NbActionsModule,
     NbCardModule,
-    AngularFullpageModule
+    NbTabsetModule,
+    NgxGraphModule,
+    NbListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

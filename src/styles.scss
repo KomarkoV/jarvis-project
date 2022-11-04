@@ -6,10 +6,3 @@
   @include nb-theme-global();
 };
 /* You can add global styles to this file, and also import other style files */
-@import url(~fullpage.js/dist/fullpage.min.css);
-
-/* customization of fullpage.js elements */
-#fp-nav ul li a span, 
-.fp-slidesNav ul li a span {
-    background: rgb(255, 255, 255);
-}
