@@ -1,29 +1,18 @@
 <nb-layout>
-
   <nb-layout-header fixed>
-    <h1>JARVIS PROJECT</h1>  
+    <div class="header-title">JARVIS PROJECT</div>
+    <div class="header-actions">
+      <a nbButton href="https://github.com/KomarkoV">
+        <nb-icon icon="github-outline"></nb-icon>Github
+      </a>
+      
+    </div>
   </nb-layout-header>
-
+  <nb-sidebar>
+    <nb-menu [items]="menuItems" autoCollapse="true">
+    </nb-menu>
+  </nb-sidebar>
   <nb-layout-column>
-    <nb-card size="large">
-      <nb-card-header>About</nb-card-header>
-      <nb-card-body>
-        <app-about></app-about>
-      </nb-card-body>
-    </nb-card>
-
-    <nb-card size="large">
-      <nb-card-header>Tech Stack</nb-card-header>
-      <nb-card-body>
-        <app-tech-stack></app-tech-stack>
-      </nb-card-body>
-    </nb-card>
-
-    <nb-card size="large">
-      <nb-card-header>Roadmap</nb-card-header>
-      <nb-card-body>
-        <app-road-map></app-road-map>
-      </nb-card-body>
-    </nb-card>
+    <router-outlet></router-outlet>
   </nb-layout-column>
 </nb-layout>

@@ -6,12 +6,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, 
   NbButtonModule, NbContextMenuModule, NbMenuModule, 
-  NbActionsModule, NbCardModule, NbTabsetModule, NbListModule } from '@nebular/theme';
+  NbActionsModule, NbCardModule, NbTabsetModule, NbListModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AboutComponent } from './home/about.component';
 import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 import { NgxGraphModule } from '@swimlane/ngx-graph';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,11 +24,12 @@ import { NgxGraphModule } from '@swimlane/ngx-graph';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    NbThemeModule.forRoot({ name: 'dark' }),
+    NbThemeModule.forRoot({ name: 'default' }),
     NbMenuModule.forRoot(),
+    NbSidebarModule.forRoot(),
+    NbIconModule,
     NbLayoutModule,
     NbEvaIconsModule,
-    NbSidebarModule,
     NbButtonModule,
     NbContextMenuModule,
     NbActionsModule,

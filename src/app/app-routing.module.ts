@@ -5,6 +5,10 @@ import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 
 const routes: Routes = [
+  { path: 'about', component: AboutComponent },
+  { path: 'roadmap', component: RoadMapComponent },
+  { path: 'tech-stack', component: TechStackComponent },
+  { path: '', redirectTo: 'about', pathMatch: 'full' },
 ];
 
 @NgModule({

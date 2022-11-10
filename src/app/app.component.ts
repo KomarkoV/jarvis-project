@@ -1,4 +1,5 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component } from '@angular/core';
+import { NbMenuItem } from '@nebular/theme';
 
 @Component({
   selector: 'app-root',
@@ -6,20 +7,41 @@ import { Component, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  @ViewChild('fullpageRef') fp_directive: any;
-  config: any;
-  fullpage_api: any;
   title = 'jarvis-project';
+  sections = ['aboutCard', 'techStackCard', 'roadmapCard'];
 
-  constructor() {
-    this.config = {
-      navigation: true,
-      anchors: ['about', 'roadmap', 'tech-stack'],
-      licenseKey: ''
-    };
-  }
-
-  getRef(fullPageRef: any) {
-    this.fullpage_api = fullPageRef;
-  }
+  menuItems: NbMenuItem[] = [
+    {
+      title: 'About Project',
+      expanded: true,
+      children: [
+        {
+          title: 'Overview',
+        },
+        {
+          title: 'Features',
+        },
+        {
+          title: 'Contact',
+        },
+      ],
+    },
+    {
+      title: 'Tech Stack',
+      children: [
+        {
+          title: 'Hardware',
+        },
+        {
+          title: 'Mobile App',
+        },
+        {
+          title: 'Analytics Portal',
+        },
+      ],
+    },
+    {
+      title: 'Roadmap'
+    },
+  ];
 }
