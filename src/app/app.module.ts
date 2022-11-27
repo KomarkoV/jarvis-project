@@ -11,7 +11,6 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { AboutComponent } from './home/about.component';
 import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
-import { NgxGraphModule } from '@swimlane/ngx-graph';
 
 @NgModule({
   declarations: [
@@ -35,7 +34,6 @@ import { NgxGraphModule } from '@swimlane/ngx-graph';
     NbActionsModule,
     NbCardModule,
     NbTabsetModule,
-    NgxGraphModule,
     NbListModule
   ],
   providers: [],

@@ -40,7 +40,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   private resetMenuItemTextColor(htmlElement: HTMLElement): void {
-    this.setHtmlElementTextColor(htmlElement, 'black');
+    this.setHtmlElementTextColor(htmlElement, '');
   }
 
   private setSelectedMenuItemTextColor(htmlElement: HTMLElement): void {
