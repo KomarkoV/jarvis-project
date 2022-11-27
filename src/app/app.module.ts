@@ -8,9 +8,12 @@ import { NbThemeModule, NbLayoutModule, NbSidebarModule,
   NbButtonModule, NbContextMenuModule, NbMenuModule, 
   NbActionsModule, NbCardModule, NbTabsetModule, NbListModule, NbIconModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
+
 import { AboutComponent } from './home/about.component';
 import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
+
+import { GoogleChartsModule } from 'angular-google-charts';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,8 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     NbActionsModule,
     NbCardModule,
     NbTabsetModule,
-    NbListModule
+    NbListModule,
+    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

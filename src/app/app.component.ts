@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { NbMenuItem, NbMenuService } from '@nebular/theme';
 import { Subject, Subscription } from 'rxjs';
 import { MenuItems } from './app-menu';
-import { Router } from '@angular/router';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -17,17 +17,16 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   private selectedMenuItemHtmlElements: Array<HTMLElement> = new Array<HTMLElement>(2);
 
   private setDefaulSelectedtMenuCategory(): void {
-    const category = this.menuItems.find(x => x.home) as NbMenuItem;
+    const category = this.menuItems.find(x => x.route === this.location.path()) as NbMenuItem;
     if(!category)
       return;
 
-    const categoryTitle = category.title;
     let categoryFirstChildrenTitle = '';
 
     if (category.children && category.children?.length > 0)
       categoryFirstChildrenTitle = category.children[0].title;
 
-    this.selectedMenuCategory.next([categoryTitle, categoryFirstChildrenTitle]);
+    this.selectedMenuCategory.next([category.title, categoryFirstChildrenTitle]);
   }
 
   private getSelectedMenuItemHtmlElement(titleValue: string): HTMLElement {
@@ -49,7 +48,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   menuItems = MenuItems;
 
-  constructor(private menuService: NbMenuService, private router: Router) { }
+  constructor(private menuService: NbMenuService, private location: Location) { }
 
   ngOnInit(): void {
     this.menuService.onItemClick().subscribe((selectedItem) => {

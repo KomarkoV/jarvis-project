@@ -1,9 +1,9 @@
 import { NbMenuItem } from '@nebular/theme';
-export const MenuItems: NbMenuItem[] = [
+export const MenuItems: NbMenuItemRoutable[] = [
     {
       title: 'About Project',
-      expanded: true,
       home: true,
+      route: '/about',
       children: [
         {
           title: 'Overview',
@@ -21,6 +21,7 @@ export const MenuItems: NbMenuItem[] = [
     },
     {
       title: 'Tech Stack',
+      route: '/tech-stack',
       children: [
         {
           title: 'Hardware',
@@ -37,7 +38,12 @@ export const MenuItems: NbMenuItem[] = [
       ],
     },
     {
+      route: '/roadmap',
       title: 'Roadmap',
-      link: 'roadmap'
+      link: 'roadmap',
     },
   ];
+
+export declare class NbMenuItemRoutable extends NbMenuItem {
+  route: string | null | undefined
+}
