@@ -13,8 +13,6 @@ import { AboutComponent } from './home/about.component';
 import { RoadMapComponent } from './road-map/road-map.component';
 import { TechStackComponent } from './tech-stack/tech-stack.component';
 
-import { GoogleChartsModule } from 'angular-google-charts';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -38,7 +36,6 @@ import { GoogleChartsModule } from 'angular-google-charts';
     NbCardModule,
     NbTabsetModule,
     NbListModule,
-    GoogleChartsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
