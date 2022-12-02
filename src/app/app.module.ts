@@ -3,10 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HttpClientModule } from '@angular/common/http';
+import { AngularSvgIconModule } from 'angular-svg-icon';
 
 import { NbThemeModule, NbLayoutModule, NbSidebarModule, 
   NbButtonModule, NbContextMenuModule, NbMenuModule, 
-  NbActionsModule, NbCardModule, NbTabsetModule, NbListModule, NbIconModule } from '@nebular/theme';
+  NbActionsModule, NbCardModule, NbTabsetModule, NbListModule,
+  NbIconModule, NbTooltipModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 
 import { AboutComponent } from './home/about.component';
@@ -36,6 +39,9 @@ import { TechStackComponent } from './tech-stack/tech-stack.component';
     NbCardModule,
     NbTabsetModule,
     NbListModule,
+    NbTooltipModule,
+    HttpClientModule,
+    AngularSvgIconModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

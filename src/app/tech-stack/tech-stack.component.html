@@ -1,5 +1,11 @@
 <nb-card>
-  <nb-card-header>{{hardwareProject.displayName}}</nb-card-header>
-  <nb-card-body>
+  <nb-card-header>{{selectedProject?.displayName}}</nb-card-header>
+  <nb-card-body style="text-align:center;">
+      <svg-icon *ngFor="let techStack of selectedProject?.techStack"
+        [src]="techStack.iconPath" 
+        [svgStyle]="{ 'width.px':90, 'height.px':90 }"
+        [nbTooltip]="techStack.technologyName"
+        nbTooltipPlacement="bottom">
+      </svg-icon>
   </nb-card-body>
 </nb-card>

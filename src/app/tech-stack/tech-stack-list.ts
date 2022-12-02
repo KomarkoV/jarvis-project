@@ -3,12 +3,12 @@ export const Projects: Project[] =
 [
     { 
         id: "hardware",
-        displayName: "Hardware & Firmware",
+        displayName: "Hardware",
         techStack: [
-            { technologyName: "ESP32", iconPath: "" },
-            { technologyName: "Arduino Nano", iconPath: "" },
-            { technologyName: "CAN bus", iconPath: "" },
-            { technologyName: "C/C++", iconPath: "" }
+            { technologyName: "ESP32", iconPath: "assets/svg/esp32.svg" },
+            { technologyName: "Arduino Nano", iconPath: "assets/svg/arduino.svg" },
+            { technologyName: "CAN bus", iconPath: "assets/svg/canbus.svg" },
+            { technologyName: "Bluetooth", iconPath: "assets/svg/bt.svg" },
         ]
     },
     {
